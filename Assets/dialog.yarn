@@ -1,0 +1,20 @@
+title: Start
+tags: 
+colorID: 0
+position: 860,408
+---
+<<if $pillboy_met is false>> 
+Pillboy: Nice to meet you
+-> Nice to meet you too
+-> I hate you
+  Pillboy: W-what?
+  <<die>> 
+<<set $pillboy_met to true>>
+<<else>>
+Pillboy: We've already met
+-> Ah, I remember you
+-> I don't remember you at all
+  Pillboy: W-what?
+  <<die>> 
+<<endif>>
+===
