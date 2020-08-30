@@ -33,6 +33,8 @@ public class DialogController : MonoBehaviour {
     }
 
     Line ParseLine(string line) {
+        //YarnSpinner only returns the entire line of dialog in the form "[Name]: [Line]"
+        //we need to separate this into two strings to display nicely
         int index = line.IndexOf(':');
 
         return new Line {

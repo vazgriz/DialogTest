@@ -15,9 +15,11 @@ public class NPC : MonoBehaviour, IInteractable {
     new Rigidbody rigidbody;
 
     void Start() {
+        //add Yarn program to dialogRunner
         dialogRunner.Dialogue.SetProgram(dialog.GetProgram());
         dialogRunner.AddStringTable(dialog);
 
+        //expose Die() function to Yarn script
         dialogRunner.AddCommandHandler("die", Die);
 
         rigidbody = GetComponent<Rigidbody>();
